@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "name": "patika-odev-dersi",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "axios-ile-fetch",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Utku",
+  "license": "ISC"
+}
