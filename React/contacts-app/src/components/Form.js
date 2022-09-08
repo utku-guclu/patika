@@ -4,7 +4,7 @@ function Form({ contacts, addContact }) {
   const [form, setForm] = useState({ fullname: "", phone: "" });
 
   useEffect(() => {
-    setForm({ fullname: "", phone: "" });
+    setForm({ fullname: "", phone: "", id: contacts.length });
   }, [contacts]);
 
   const onChangeInput = (e) => {
@@ -15,7 +15,9 @@ function Form({ contacts, addContact }) {
     e.preventDefault();
 
     // INPUT CONTROL
-    if (!form.fullname || !form.phone) return false;
+    if (!form.fullname || !form.phone || isNaN(Number(form.phone))) {
+      return false;
+    }
 
     addContact([...contacts, form]);
   };
