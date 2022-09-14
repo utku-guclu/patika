@@ -39,9 +39,33 @@ const typeDefs = gql`
     comments: [Comment!]!
     comment(id: ID!): Comment!
   }
+
+  type Mutation {
+    createUser(fullName: String!): Boolean!
+    createPost(title: String!, user_id: ID!): Post!
+  }
 `;
 
 const resolvers = {
+  Mutation: {
+    createUser: (parent, { fullName }) => {
+      const user = {
+        id: 11,
+        fullName,
+      };
+      users.push(user);
+      return true;
+    },
+    createPost: (parent, { title, user_id }) => {
+      const post = {
+        id: 11,
+        title,
+        user_id,
+      };
+      posts.push(post);
+      return post;
+    },
+  },
   Query: {
     // user
     users: () => users,
@@ -77,5 +101,5 @@ const server = new ApolloServer({
 });
 
 server
-  .listen(4001)
+  .listen(4003)
   .then(({ url }) => console.log(`Graphql server is up at ${url}!`));

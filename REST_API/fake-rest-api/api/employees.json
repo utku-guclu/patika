@@ -1,0 +1,39 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "Jack",
+      "last_name": "Black",
+      "email": "jackblack@gmail.com",
+      "roleId": 1
+    },
+    {
+      "id": 2,
+      "first_name": "Jesus",
+      "last_name": "Christ",
+      "email": "christjesus@jesus.com",
+      "roleId": 3
+    },
+    {
+      "id": 3,
+      "first_name": "John",
+      "last_name": "Lyshitski",
+      "email": "johnlyshitski@gmail.com",
+      "roleId": 2
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "Manager"
+    },
+    {
+      "id": 2,
+      "name": "Engineer"
+    },
+    {
+      "id": 3,
+      "name": "Intern"
+    }
+  ]
+}
