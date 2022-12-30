@@ -1,0 +1,13 @@
+{
+  "name": "NewsApp",
+  "version": "1.0.0",
+  "description": "training",
+  "main": "index.js",
+  "author": "Utku",
+  "license": "MIT",
+  "dependencies": {
+    "create-expo-app": "^1.1.4",
+    "expo-cli": "^6.0.8",
+    "todo": "^1.1.0"
+  }
+}
