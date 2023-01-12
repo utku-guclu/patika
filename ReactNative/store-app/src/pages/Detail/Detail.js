@@ -9,7 +9,9 @@ import styles from "./Detail.style";
 
 const Detail = ({ route }) => {
   const { id } = route.params;
-  const { loading, error, data } = useFetch(`${process.env.API_URL}/${id}`);
+  const { loading, error, data } = useFetch(
+    `${process.env.API_PRODUCT_URL}/${id}`
+  );
 
   // loading
   if (loading) {
@@ -31,7 +33,7 @@ const Detail = ({ route }) => {
       <View style={styles.body_container}>
         <Text style={styles.title}>{data.title}</Text>
         <Text style={styles.desc}>{data.description}</Text>
-        <Text style={styles.price}>{data.price}</Text>
+        <Text style={styles.price}>${data.price}</Text>
       </View>
     </View>
   );
