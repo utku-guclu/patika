@@ -5,8 +5,6 @@ import { View, Image } from "react-native";
 
 // johnd m38rmF$
 
-// import AsyncStorage from "@react-native-async-storage/async-storage";
-
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 
@@ -34,8 +32,11 @@ const Login = ({ navigation }) => {
     Alert.alert("Store", "Error!");
   }
 
+  // temp user
+  const user = "Utku";
+
   if (data.token) {
-    dispatch({ type: "SET_USER", payload: { data } });
+    dispatch({ type: "SET_USER", payload: { user } });
     navigation.navigate("ProductsPage");
   } else {
     Alert.alert("something is wrong!");

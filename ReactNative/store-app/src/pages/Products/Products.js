@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList } from "react-native";
+import { View, Text, FlatList, Button } from "react-native";
 
 import Loading from "../../components/Loading";
 import Error from "../../components/Error";
@@ -7,8 +7,10 @@ import Error from "../../components/Error";
 import ProductCard from "../../components/ProductCard";
 
 import useFetch from "../../hooks/useFetch";
+import { useDispatch } from "react-redux";
 
 const Products = ({ navigation }) => {
+  const dispatch = useDispatch();
   const { loading, data, error } = useFetch(process.env.API_PRODUCT_URL);
 
   const handleProductSelect = (id) => {
@@ -36,6 +38,10 @@ const Products = ({ navigation }) => {
 
   return (
     <View>
+      <Button
+        title="Logout"
+        onPress={() => dispatch({ type: "SET_USER", payload: { user: null } })}
+      />
       <FlatList data={data && data} renderItem={renderProduct} />
     </View>
   );

@@ -7,7 +7,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [isAuthLoading, setIsAuthLoading] = useState(true);
+  const [isAuthLoading, setIsAuthLoading] = useState(false);
 
   useEffect(() => {
     // promise => .then
@@ -15,6 +15,7 @@ const AuthProvider = ({ children }) => {
       console.log(userSession);
       if (userSession) {
         try {
+          setIsAuthLoading(true);
           setUser(JSON.parse(userSession));
         } catch (error) {
           console.log(error);
@@ -23,7 +24,7 @@ const AuthProvider = ({ children }) => {
         }
       }
     });
-  });
+  }, []);
 
   const reducer = reducers;
   const preloadedState = {

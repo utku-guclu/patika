@@ -12,7 +12,7 @@ const Detail = ({ route }) => {
   const { loading, error, data } = useFetch(
     `${process.env.API_PRODUCT_URL}/${id}`
   );
-
+  console.log(data);
   // loading
   if (loading) {
     return <Loading />;
