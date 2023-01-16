@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     // promise => .then
     AsyncStorage.getItem("@user").then((userSession) => {
-      console.log(userSession);
+      // console.log(userSession);
       if (userSession) {
         try {
           setIsAuthLoading(true);

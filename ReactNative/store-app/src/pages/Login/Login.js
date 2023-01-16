@@ -33,10 +33,10 @@ const Login = ({ navigation }) => {
   }
 
   // temp user
-  const user = "Utku";
+  // const user = "Utku";
 
   if (data.token) {
-    dispatch({ type: "SET_USER", payload: { user } });
+    dispatch({ type: "SET_USER", payload: { data } });
     navigation.navigate("ProductsPage");
   } else {
     Alert.alert("something is wrong!");
