@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./usePost\";","map":{"version":3,"names":["default"],"sources":["/home/utku/Desktop/patika/ReactNative/kodwork/src/hooks/usePost/index.js"],"sourcesContent":["export { default } from \"./usePost\";\n"],"mappings":"AAAA,SAASA,OAAO"},"metadata":{},"sourceType":"module"}
